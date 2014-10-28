@@ -24,4 +24,12 @@ public class TemplateTest
 		template.set("name", "Boopathi");
 		assertEquals("Hard coded evaluate method", "Hello, Boopathi", template.evaluate());
 	}
+	
+	@Test
+	public void differentTemplate()throws Exception
+	{
+		Template template = new Template("Hi, ${name}");
+		template.set("name", "Balaji");
+		assertEquals("Hi, Balaji", template.evaluate());
+	}
 }
