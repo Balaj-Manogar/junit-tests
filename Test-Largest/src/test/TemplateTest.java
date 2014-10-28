@@ -12,7 +12,7 @@ public class TemplateTest
 	@Test
 	public void oneVariable()throws Exception
 	{
-		Template template = new Template();
+		Template template = new Template("Hello, ${name}");
 		template.set("name", "Balaji");
 		assertEquals("Hello, Balaji", template.evaluate());
 	}
