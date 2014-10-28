@@ -16,4 +16,12 @@ public class TemplateTest
 		template.set("name", "Balaji");
 		assertEquals("Hello, Balaji", template.evaluate());
 	}
+	
+	@Test
+	public void differentvalue()throws Exception
+	{
+		Template template = new Template("Hello, ${name}");
+		template.set("name", "Boopathi");
+		assertEquals("Hard coded evaluate method", "Hello, Boopathi", template.evaluate());
+	}
 }
